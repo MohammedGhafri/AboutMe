@@ -1,0 +1,68 @@
+
+
+body{
+    background-image: url(https://www.icangiveyouhouse.com/audio/2012/08/sunshine-with-god-grace-wallpaper.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+}
+header{
+    position: relative;
+    margin-top: 3%;
+    font-size: 34px;
+}
+ .divone  li{
+    display: inline-block;
+    font-size: 30px;
+    margin: 8%;
+    background-color:blue;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 3px;
+    opacity: 0.6;
+    margin-bottom: 10%;
+}
+.divone a{
+    text-decoration: none;
+    color: red;
+}
+h2{
+    color: gold;
+    font-size: 30px;
+    margin-top: -6%;
+    background-color:white;
+    width: fit-content;
+    margin-left: 45%;
+}
+
+p:nth-child(2){
+    
+    text-align: left;
+    margin-left: 0%;
+    margin-top: 4%;
+    font-size: 20px;
+    width: 75%;
+    color:black;
+}
+p:first-child{
+    margin-top: 7%;
+    font-size: 25px;
+    width: fit-content;
+background-color: blanchedalmond;
+    margin-left: 45%;
+    border-radius: 3px;
+    
+}
+strong{
+    background-color: red;
+}
+i{
+    margin-right: 20%;
+    color:white ;
+}
+b{
+    font-style: italic;
+background-color: yellow;
+}
