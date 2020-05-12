@@ -108,25 +108,108 @@ return cooking;}
 
 
 
-    var input = prompt('Q:6 (additional question)which one do you love ? cats Or Cars Or trees Or fashions');
-    var input = input.toLocaleLowerCase();
-    switch (input) {
-        case 'cats':
-            alert('Nice choice,They can lower your risk of heart disease.');
-            break;
-        case 'cars':
-            alert('Your awesome, world of cars is great');
-            break;
-        case 'tress':
-            alert('Quiet person, Have a nice day');
-            break;
-        case 'fashion':
-            alert('You are organized and stylish');
-            break;
-        default:
-            alert('If you don\'t like cats Or Cars Or trees Or fashions then you are mystriouse');
+    // var input = prompt('Q:6 (additional question)which one do you love ? cats Or Cars Or trees Or fashions');
+    // var input = input.toLocaleLowerCase();
+    // switch (input) {
+    //     case 'cats':
+    //         alert('Nice choice,They can lower your risk of heart disease.');
+    //         break;
+    //     case 'cars':
+    //         alert('Your awesome, world of cars is great');
+    //         break;
+    //     case 'trees':
+    //         alert('Quiet person, Have a nice day');
+    //         break;
+    //     case 'fashion':
+    //         alert('You are organized and stylish');
+    //         break;
+    //     default:
+    //         alert('If you don\'t like cats Or Cars Or trees Or fashions then you are mystriouse');
+
+    // }
+    /*the last line command is alert all the previous things*/
+    alert(`Welcom : ${userName} .But my name is ${me} and When I asked you If I like blue You said ${second} .And When I asked You If you know mySpeciality You said ${third} . And when I asked you If You Know My place of residence you said ${fourth} .But when i asked you if you know something about my fatour you said ${fifth}`);
+
+var old;// this is for Question :
+
+var i=1;// initiate number of trails
+var y=3;// number of remaining trails
+// do {
+    
+// old = prompt('Guess the old of the Universe in billions? e.g if you think its 20 billion just enter 20 and so on');
+// if(old==14){
+//     alert(`Thats Right its ${old} billions you got from ${i} trial`);
+//     }else if(old < 14){
+//         alert (`too low, this is ${i} trail, just try again`);
+//     }else {
+//         alert(`Too high, this is ${i} trail, Hust keep trying`)
+//     }
+//     i++;
+// }
+// while(old!=14);
+// alert(`Its ${old} billions, imagin! You got it from ${i} times`);
+
+// this is for Question :// 6
+for(i; i<5;i++){
+    old = prompt(`Guess the old of the Universe in billions? e.g if you think its 20 billion just enter 20 and so on. this is ${i} trail`);
+    if(old==14){
+        alert(`Thats Right its ${old} billions you got from ${i} trial`);
+        break;
+        }else if(old < 14){
+            alert (`too low, this is ${i} trail, just try again you still have ${y} trail`);
+        }else {
+            alert(`Too high, this is ${i} trail, Hust keep trying you still have ${y} trail`)
+        }
+        y--;
+
+}
+if(old==14){
+alert(`Its ${old} billions, imagin! You got it from ${i} times`);
+}else {
+    alert(`The Correct answer is  14 billions, imagin! You can try again if you click refresh` );
+}
+
+
+//Question : 7
+var cars=['ford','kia','opel','golf','bm','Mercedes','toyota'];
+var carinput;
+var t=1;// initiate number of trails
+var q=5;// number of remaining trails
+for( t; t<7 ;t++ ){
+    carinput=prompt('Guess what is my favourit car type ? one of the following : ford , kia , opel , golf , bm , Mercedes , toyota ').toLocaleLowerCase();
+    if(carinput==cars[6]){
+        alert ('That\'s correct answer');break;}
+        else{
+            alert(`Unfortunately, you were not successful. try again you still have ${q} trail `)
 
     }
-    /*the last line command is alrt all the previous things*/
-    alert(`Welcom : ${userName} .But my name is ${me} and When I asked you If I like blue You said ${second} .And When I asked You If you know mySpeciality You said ${third} . And when I asked you If You Know My place of residence you said ${fourth} .But when i asked you if you know something about my fatour you said ${fifth}`);
- 
+    q--;
+}
+if(carinput==cars[6]){
+    alert(`Its ${carinput} you got it from ${t} times`)
+}else{
+alert(`The Correct answer is  ${cars[6]} , don't be surprized! You can try again if you click refresh`);
+}
+// show result
+var result=0;// this variable for result
+if(first=='yes'){
+result++;
+}
+if(second=='yes'){
+    result++;
+}
+if(third=='yes'){
+    result++;
+}
+if(fourth=='yes'){
+    result++;
+}
+if(fifth=='yes'){
+    result++;
+}
+if(old==14){
+    result++;
+}if(carinput==cars[6]){
+    result++;
+}
+alert(`your result is ${result} out of 7 in numbers ${result}/7`);
