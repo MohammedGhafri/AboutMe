@@ -4,11 +4,14 @@ var userName= prompt('Please, What is your name ?');
 var me='Mohammad_Ghafri';
 
 
-var first =myName();//fisrt question
+var first =myName();//fisrt question 
 var second =myColor();//second question
 var third =mySpeciality();//third question
 var fourth =resident();//fourth question
 var fifth =myCook();//fifth question
+
+ageGuessing();//sixth question 
+carGuessing();//seventh question 
 
 
 function myName() {
@@ -150,6 +153,12 @@ var y=3;// number of remaining trails
 // alert(`Its ${old} billions, imagin! You got it from ${i} times`);
 
 // this is for Question :// 6
+var old;// this is for Question :
+function ageGuessing(){
+    
+
+var i=1;// initiate number of trails
+var y=3;// number of remaining trails
 for(i; i<5;i++){
     old = prompt(`Guess the old of the Universe in billions? e.g if you think its 20 billion just enter 20 and so on. this is ${i} trail`);
     if(old==14){
@@ -163,12 +172,10 @@ for(i; i<5;i++){
         y--;
 
 }
-if(old==14){
-alert(`Its ${old} billions, imagin! You got it from ${i} times`);
-}else {
+if(old != 14) {
     alert(`The Correct answer is  14 billions, imagin! You can try again if you click refresh` );
 }
-
+}
 
 //Question : 7
 // var cars=['ford','kia','opel','golf','bm','Mercedes','toyota'];
@@ -190,11 +197,12 @@ alert(`Its ${old} billions, imagin! You got it from ${i} times`);
 // }else{
 // alert(`The Correct answer is  ${cars[6]} , don't be surprized! You can try again if you click refresh`);
 // }
+var question_guess;
 
-var cars=['fusion','optima','opel','camry','bmx5','Mercedes','toyota'];
-var carinput;
-var question_7=0;//number of trials for question seven
-var question_guess=false;
+function carGuessing(){
+    var carinput;
+    var cars=['fusion','optima','opel','camry','bmx5','Mercedes','toyota'];
+    var question_7=0;//number of trials for question seven
 while(question_7<6){
     carinput=prompt('Guess what is my favourit car type ?').toLocaleLowerCase();
     for(var j=0; j<cars.length;j++){
@@ -209,8 +217,18 @@ while(question_7<6){
     }
     question_7++;
 }
-alert(`These are my favourit cars ${cars}`);
+/*
+first
+second
+third
+fourth
+fifth
+old
+question_guess
 
+*/
+alert(`These are my favourit cars ${cars}`);
+}
 // show result
 var result=0;// this variable for result
 if(first=='yes'){
@@ -233,6 +251,7 @@ if(old==14){
 }if(question_guess){
     result++;
 }
-result--;// to match with index of array( if result was equal to seven it will cause problem due to the array has an index limit to six)
+//result--;// to match with index of array( if result was equal to seven it will cause problem due to the array has an index limit to six)
+
 var resultWord=['one','two','three','four','five','six','seven'];
 alert(`your result is ${result} out of 7 . in words ${resultWord[result]} / seven `);// alert the result
