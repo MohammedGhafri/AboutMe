@@ -171,25 +171,46 @@ alert(`Its ${old} billions, imagin! You got it from ${i} times`);
 
 
 //Question : 7
-var cars=['ford','kia','opel','golf','bm','Mercedes','toyota'];
-var carinput;
-var t=1;// initiate number of trails
-var q=5;// number of remaining trails
-for( t; t<7 ;t++ ){
-    carinput=prompt('Guess what is my favourit car type ? one of the following : ford , kia , opel , golf , bm , Mercedes , toyota ').toLocaleLowerCase();
-    if(carinput==cars[6]){
-        alert ('That\'s correct answer');break;}
-        else{
-            alert(`Unfortunately, you were not successful. try again you still have ${q} trail `)
+// var cars=['ford','kia','opel','golf','bm','Mercedes','toyota'];
+// var carinput;
+// var t=1;// initiate number of trails
+// var q=5;// number of remaining trails
+// for( t; t<7 ;t++ ){
+//     carinput=prompt('Guess what is my favourit car type ? one of the following : ford , kia , opel , golf , bm , Mercedes , toyota ').toLocaleLowerCase();
+//     if(carinput==cars[6]){
+//         alert ('That\'s correct answer');break;}
+//         else{
+//             alert(`Unfortunately, you were not successful. try again you still have ${q} trail `)
 
+//     }
+//     q--;
+// }
+// if(carinput==cars[6]){
+//     alert(`Its ${carinput} you got it from ${t} times`)
+// }else{
+// alert(`The Correct answer is  ${cars[6]} , don't be surprized! You can try again if you click refresh`);
+// }
+
+var cars=['fusion','optima','opel','camry','bmx5','Mercedes','toyota'];
+var carinput;
+var question_7=0;//number of trials for question seven
+var question_guess=false;
+while(question_7<6){
+    carinput=prompt('Guess what is my favourit car type ?').toLocaleLowerCase();
+    for(var j=0; j<cars.length;j++){
+        if(carinput==cars[j]){
+            alert('Correct answer');
+            question_guess=true;
+            break;
+        }
     }
-    q--;
+    if(question_guess){
+        break;
+    }
+    question_7++;
 }
-if(carinput==cars[6]){
-    alert(`Its ${carinput} you got it from ${t} times`)
-}else{
-alert(`The Correct answer is  ${cars[6]} , don't be surprized! You can try again if you click refresh`);
-}
+alert(`These are my favourit cars ${cars}`);
+
 // show result
 var result=0;// this variable for result
 if(first=='yes'){
@@ -209,7 +230,9 @@ if(fifth=='yes'){
 }
 if(old==14){
     result++;
-}if(carinput==cars[6]){
+}if(question_guess){
     result++;
 }
-alert(`your result is ${result} out of 7 in numbers ${result}/7`);
+result--;// to match with index of array( if result was equal to seven it will cause problem due to the array has an index limit to six)
+var resultWord=['one','two','three','four','five','six','seven'];
+alert(`your result is ${result} out of 7 . in words ${resultWord[result]} / seven `);// alert the result
