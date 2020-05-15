@@ -11,6 +11,16 @@ header{
     position: relative;
     margin-top: 3%;
     font-size: 34px;
+    border:3px solid blue;
+    width: 25%;
+    margin-left: 36%;
+}
+header:hover
+{
+    background-color: gold;
+    
+    transform: scale(1.5);
+    border-radius: 25px;
 }
  .divone  li{
     display: inline-block;
@@ -23,10 +33,31 @@ header{
     border-radius: 3px;
     opacity: 0.6;
     margin-bottom: 10%;
+    
+}
+.divone li:hover{
+    opacity: 1;
 }
 .divone a{
     text-decoration: none;
     color: red;
+}
+
+.fisrtp{
+    border: 3px dashed red;
+    width: 50%;
+    margin-left: 24%;
+    padding: 1% 1%;
+    border-bottom: 10px dotted black;
+}
+strong:hover{
+    font-size: 50px;
+}
+b:hover{
+    font-size: 50px;
+}
+.fisrtp:hover{
+    background-color: purple;
 }
 .fisrtp h2{
     color: gold;
@@ -35,7 +66,12 @@ header{
     background-color:white;
     width: fit-content;
     margin-left: 45%;
+
 }
+.fisrtp h2:hover{
+    color: black;
+}
+
 
 p:nth-child(2){
     
@@ -70,8 +106,14 @@ background-color: yellow;
     border: 3px dashed #f3f3f3;
     width: 25%;
     height: 200px;
-    float: left;
-    margin: 3% 0 0 15%;
+    float: none;
+    margin: 3% 0 0 37%;
+    border-radius: 79px;
+    font-family: fantasy;
+}
+.workul:hover{
+    background-color: yellow;
+    transform: scale(1.5);
 }
 .workul h2{
     padding: 10% 0 0 0;
@@ -85,17 +127,35 @@ background-color: yellow;
 .interestt{
     border: 5px dotted red;
     width: 50%;
-    margin: 3% 0 0 45%;
+    margin: 3% 0 0 26%;
+    border-radius: 110px;
 }
+.interestt:hover ol{
+    background-color: yellow;
+    transform: scale(1.2);
+}
+.interestt:hover{
+    background-color: orange;
+}
+
 .interestt h2{
     padding: 10% 0 0 0;
     font-size: 30px;
     margin-bottom: 5%;
     
 }
+.interestt ol{
+    background-color: #ffffff;
+    border-radius: 110px;
+}
 .interestt ol li{
     font-size: 24px;
     color:green;
-    background-color: #ffffff;
+    
+    
     
 }
+/* ol{
+    list-style-position: inside;
+    list-style: upper-roman;
+} */
